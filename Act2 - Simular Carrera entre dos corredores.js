@@ -7,7 +7,7 @@ class Dice{
 let dice = new Dice;
 let runner1=0,runner2=0;
 
-while (runner1<=100&&runner2<=100) {
+while (runner1<100&&runner2<100) {
     let d1 = dice.throw();
     if (d1>=4) {
         runner1 += 2;
@@ -17,7 +17,7 @@ while (runner1<=100&&runner2<=100) {
         runner1 += 1;
     }
     let d2 = dice.throw();
-    if (d2>=4&&d2<=6) {
+    if (d2>=4) {
         runner2 += 2;
     }else if (d2==3) {
         runner2 += 3;
