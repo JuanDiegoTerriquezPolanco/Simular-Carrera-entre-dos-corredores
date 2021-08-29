@@ -5,9 +5,10 @@ class Dice{
 }
 
 let dice = new Dice;
-let runner1=0,runner2=0;
+let runner1=0,runner2=0,r=1;
 
 while (runner1<100&&runner2<100) {
+    console.log(`Round: ${r++}`);
     let d1 = dice.throw();
     if (d1>=4) {
         runner1 += 2;
@@ -24,11 +25,13 @@ while (runner1<100&&runner2<100) {
     }else{
         runner2 += 1;
     }
+    console.log(`Runner 1: ${runner1}`);
+    console.log(`Runner 2: ${runner2}`);
 }
-if (runner1>runner2) {
+if (runner1>runner2&&runner2<100) {
     console.log(`Runner 1 was the winner with: ${runner1}`);
     console.log(`Runner 2 was the loser with: ${runner2}`);
-}else if (runner2>runner1) {
+}else if (runner2>runner1&&runner1<100) {
     console.log(`Runner 2 was the winner with: ${runner2}`);
     console.log(`Runner 1 was the loser with: ${runner1}`);
 }else{
